@@ -17,7 +17,7 @@ namespace CadastroUsuario.Controllers
         }
 
         [HttpGet()]
-        public async Task <IActionResult> Logar(string login, string senha)
+        public async Task <IActionResult> Logar(string? login, string? senha)
         {
             var retorno = await _UsuarioService.RealizarLogin(login, senha);
 

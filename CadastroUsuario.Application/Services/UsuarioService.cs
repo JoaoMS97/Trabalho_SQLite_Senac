@@ -23,26 +23,24 @@ namespace CadastroUsuario.Application.Services
                 return new RetornoDto(String.Format("Os campos '{0}' e '{1}' não podem ser nulos.", "login", "senha"), (int)StatusCodeEnum.Retorno.NotFound);
             }
 
-            string hash;
-
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                hash = Hash.GerarSenhaComHash(sha256Hash, senha);
-            }
-
-            _usuarioRepository.Insert(new UsuarioEntity(login, hash));
+            _usuarioRepository.Insert(new UsuarioEntity(login, RetornarHash(senha)));
 
             return new RetornoDto("Sucesso", (int)StatusCodeEnum.Retorno.Sucesso);
         }
 
         public async Task<RetornoDto> GetById(Guid id)
         {
-            if (id == Guid.Empty)
+            if (id == Guid.Parse("00000000-0000-0000-0000-000000000000"))
             {
                 return new RetornoDto(String.Format("O campo '{0}' não pode ser nulo.", "Id"), (int)StatusCodeEnum.Retorno.BadRequest);
             }
 
             var result = await _usuarioRepository.GetByGuid(id);
+
+            if (result == null)
+            {
+                return new RetornoDto("ID não encontrado!", (int)StatusCodeEnum.Retorno.NotFound);
+            }
 
             return new RetornoDto("Sucesso", (int)StatusCodeEnum.Retorno.Sucesso, result);
         }
@@ -54,13 +52,23 @@ namespace CadastroUsuario.Application.Services
                 return new RetornoDto("Informe o login e a senha para logar no site", (int)StatusCodeEnum.Retorno.BadRequest);
             }
 
-            var result = await _usuarioRepository.GetByLogin(login, senha);
+            var result = await _usuarioRepository.GetByLogin(login);
 
-            if(result.Login == null)
+            if(result == null)
             {
-                return new RetornoDto("Login não encontrado!", (int)StatusCodeEnum.Retorno.NotFound);
+                return new RetornoDto("Login ou senha inválidos!", (int)StatusCodeEnum.Retorno.NotFound);
             }    
 
+            if(RetornarHash(senha) != result.Password)
+            {
+                return new RetornoDto("Login ou senha inválidos!", (int)StatusCodeEnum.Retorno.BadRequest);
+            }
+
+            return new RetornoDto("Logado com Sucesso!", (int)StatusCodeEnum.Retorno.Sucesso);
+        }
+
+        private string RetornarHash(string senha)
+        {
             string hash;
 
             using (SHA256 sha256Hash = SHA256.Create())
@@ -68,12 +76,7 @@ namespace CadastroUsuario.Application.Services
                 hash = Hash.GerarSenhaComHash(sha256Hash, senha);
             }
 
-            if(hash != result.Password)
-            {
-                return new RetornoDto("Login ou senha inválidos!", (int)StatusCodeEnum.Retorno.BadRequest);
-            }
-
-            return new RetornoDto("Logado com Sucesso!", (int)StatusCodeEnum.Retorno.Sucesso);
+            return hash;
         }
     }
 }

@@ -22,12 +22,12 @@ namespace CadastroUsuario.Infraestructure.RepositoryBase
 
         public async Task<T> GetByGuid(Guid id)
         {
-            return await _cadastroUsuarioContext.Set<T>().FirstAsync(x => x.Id == id);
+            return await _cadastroUsuarioContext.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<T> GetByLogin(string login, string senha)
+        public async Task<T> GetByLogin(string login)
         {
-            return await _cadastroUsuarioContext.Set<T>().FirstAsync(x => x.Login == login);
+            return await _cadastroUsuarioContext.Set<T>().FirstOrDefaultAsync(x => x.Login == login);
         }
     }
 }

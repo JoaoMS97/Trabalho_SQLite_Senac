@@ -30,9 +30,9 @@ namespace CadastroUsuario.Controllers
         }
 
         [HttpGet()]
-        public async Task<IActionResult> GetById(Guid id)
+        public async Task<IActionResult> GetById(Guid? id)
         {
-            var retorno = await _usuarioService.GetById(id);
+            var retorno = await _usuarioService.GetById(id.GetValueOrDefault());
 
             if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.Sucesso))
             {

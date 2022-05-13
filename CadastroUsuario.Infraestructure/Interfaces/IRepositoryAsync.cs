@@ -6,6 +6,6 @@
 
         Task<T> GetByGuid(Guid id);
 
-        Task<T> GetByLogin(string login, string senha);
+        Task<T> GetByLogin(string login);
     }
 }
