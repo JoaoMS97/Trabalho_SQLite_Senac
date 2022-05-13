@@ -5,5 +5,7 @@
         Task Insert(T entity);
 
         Task<T> GetByGuid(Guid id);
+
+        Task<T> GetByLogin(string login, string senha);
     }
 }

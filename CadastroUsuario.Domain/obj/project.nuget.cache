@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4mVkLpYgOhadN1SMtBm7Dwv3v7J4fCcNOKPowure/EY0+FdZrzdTpmt9Lu3N6uszsQkpEI12i5gm+oJjd4VRBQ==",
+  "dgSpecHash": "VZB+Z9RuSzs1d5MCTlJ7Ah4yqaFbIJdiB0vO9pao5W0gJbwJQZLw3tEgBefF3QW9FMNF4nck/QI3B/xr6T7R0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Predator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Predator\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.5\\microsoft.data.sqlite.core.6.0.5.nupkg.sha512",

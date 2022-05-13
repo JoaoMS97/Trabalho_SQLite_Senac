@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario\\CadastroUsuario.csproj": {}
+    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario\\CadastroUsuario.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj": {
+    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj",
         "projectName": "CadastroUsuario.Application",
-        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj",
+        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj",
         "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Application\\obj\\",
+        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Predator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj"
+              "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj"
               }
             }
           }
@@ -53,6 +53,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "XAct.Core.PCL": {
+              "target": "Package",
+              "version": "[0.0.5014, )"
             }
           },
           "imports": [
@@ -74,14 +78,14 @@
         }
       }
     },
-    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj": {
+    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
         "projectName": "CadastroUsuario.Domain",
-        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
+        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
         "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Predator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj": {
+    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj",
         "projectName": "CadastroUsuario.Infraestructure",
-        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj",
+        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj",
         "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Infraestructure\\obj\\",
+        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Predator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,8 +168,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj": {
-                "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj"
+              "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj": {
+                "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj"
               }
             }
           }
@@ -220,14 +224,14 @@
         }
       }
     },
-    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario\\CadastroUsuario.csproj": {
+    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario\\CadastroUsuario.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario\\CadastroUsuario.csproj",
+        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario\\CadastroUsuario.csproj",
         "projectName": "CadastroUsuario",
-        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario\\CadastroUsuario.csproj",
+        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario\\CadastroUsuario.csproj",
         "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario\\obj\\",
+        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Predator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -244,8 +248,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj": {
-                "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj"
+              "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj": {
+                "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj"
               }
             }
           }

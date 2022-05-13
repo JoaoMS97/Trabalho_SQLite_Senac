@@ -12,3 +12,17 @@ C:\Users\Predator\source\.Net6\CadastroUsuario\CadastroUsuario.Domain\obj\Debug\
 C:\Users\Predator\source\.Net6\CadastroUsuario\CadastroUsuario.Domain\obj\Debug\net6.0\ref\CadastroUsuario.Domain.dll
 C:\Users\Predator\source\.Net6\CadastroUsuario\CadastroUsuario.Domain\bin\Debug\net6.0\CadastroUsuario.Domain.runtimeconfig.json
 C:\Users\Predator\source\.Net6\CadastroUsuario\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.genruntimeconfig.cache
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\bin\Debug\net6.0\CadastroUsuario.Domain.deps.json
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\bin\Debug\net6.0\CadastroUsuario.Domain.runtimeconfig.json
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\bin\Debug\net6.0\CadastroUsuario.Domain.dll
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\bin\Debug\net6.0\CadastroUsuario.Domain.pdb
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.csproj.AssemblyReference.cache
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.AssemblyInfoInputs.cache
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.AssemblyInfo.cs
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.dll
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\refint\CadastroUsuario.Domain.dll
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.pdb
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\CadastroUsuario.Domain.genruntimeconfig.cache
+C:\Users\Predator\source\.Net6\CadastroUsuario\Trabalho_SQLite_Senac\CadastroUsuario.Domain\obj\Debug\net6.0\ref\CadastroUsuario.Domain.dll

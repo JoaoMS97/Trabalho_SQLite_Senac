@@ -25,5 +25,9 @@ namespace CadastroUsuario.Infraestructure.RepositoryBase
             return await _cadastroUsuarioContext.Set<T>().FirstAsync(x => x.Id == id);
         }
 
+        public async Task<T> GetByLogin(string login, string senha)
+        {
+            return await _cadastroUsuarioContext.Set<T>().FirstAsync(x => x.Login == login);
+        }
     }
 }

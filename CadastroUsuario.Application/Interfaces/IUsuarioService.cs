@@ -4,8 +4,10 @@ namespace CadastroUsuario.Application.Interfaces
 {
     public interface IUsuarioService
     {
-        void Inserir(string login, string senha);
+        RetornoDto Inserir(string login, string senha);
 
-        Task<UsuarioDto> GetById(Guid id);
+        Task<RetornoDto> GetById(Guid id);
+
+        Task<RetornoDto> RealizarLogin(string login, string senha);
     }
 }
