@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CadastroUsuario.Infraestructure.Context
 {
-    public class CadastroUsuarioContext : DbContext
+    public class UsuarioContext : DbContext
     {
-        public CadastroUsuarioContext(DbContextOptions options) : base(options) { }
+        public UsuarioContext(DbContextOptions options) : base(options) { }
 
         public DbSet<UsuarioEntity> UsuarioEntity { get; set; }
 

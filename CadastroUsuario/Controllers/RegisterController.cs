@@ -7,19 +7,19 @@ namespace CadastroUsuario.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CadastroController : ControllerBase
+    public class RegisterController : ControllerBase
     {
         private readonly IUsuarioService _usuarioService;
 
-        public CadastroController(IUsuarioService usuarioService)
+        public RegisterController(IUsuarioService usuarioService)
         {
             _usuarioService = usuarioService;
         }
 
         [HttpPost()]
-        public IActionResult Post([FromBody] InputDeUsuarioDto usuarioDto)
+        public IActionResult Post([FromBody] InputUsuarioDto usuarioDto)
         {
-            var retorno = _usuarioService.Inserir(usuarioDto.Login, usuarioDto.Password);
+            var retorno = _usuarioService.Inserir(usuarioDto.Login, usuarioDto.Password, usuarioDto.Email);
 
             if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.Sucesso))
             {

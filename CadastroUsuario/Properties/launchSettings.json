@@ -19,7 +19,9 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "SaltPassword1": "2af038735f23077ada8ad7754b94d6f8",
         "SaltPassword2": "40347ee18c161f5fa607614ef0ff4c61",
-        "SaltPassword3": "cd04dc3b99e404a1e755df80caa77ba6"
+        "SaltPassword3": "cd04dc3b99e404a1e755df80caa77ba6",
+        "EmailDeDisparo": "yogurt.ofc@gmail.com",
+        "Password": "Senac2022"
       }
     },
     "IIS Express": {

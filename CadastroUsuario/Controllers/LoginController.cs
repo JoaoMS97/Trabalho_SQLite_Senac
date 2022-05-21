@@ -9,17 +9,17 @@ namespace CadastroUsuario.Controllers
     [Route("[controller]")]
     public class LoginController : ControllerBase
     {
-        private readonly IUsuarioService _UsuarioService;
+        private readonly IUsuarioService _LoginService;
 
-        public LoginController(IUsuarioService usuarioService)
+        public LoginController(IUsuarioService loginService)
         {
-            _UsuarioService = usuarioService;
+            _LoginService = loginService;
         }
 
-        [HttpGet()]
+        [HttpGet("Logar")]
         public async Task <IActionResult> Logar(string? login, string? senha)
         {
-            var retorno = await _UsuarioService.RealizarLogin(login, senha);
+            var retorno = await _LoginService.RealizarLogin(login, senha);
 
             if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.Sucesso))
             {
@@ -29,6 +29,37 @@ namespace CadastroUsuario.Controllers
             if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.BadRequest))
             {
                 return BadRequest(retorno.Mensagem);
+            }
+
+            return NotFound(retorno.Mensagem);
+        }
+
+        [HttpGet("AlterarSenha")]
+        public async Task<IActionResult> AlterarSenha(string? login)
+        {
+            var retorno = await _LoginService.AlterarSenha(login);
+
+            if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.Sucesso))
+            {
+                return Ok(retorno.Mensagem);
+            }
+
+            if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.BadRequest))
+            {
+                return BadRequest(retorno.Mensagem);
+            }
+
+            return NotFound(retorno.Mensagem);
+        }
+
+        [HttpPost("ValidarToken")]
+        public async Task<IActionResult> ValidarToken(Guid token)
+        {
+            var retorno = await _LoginService.VerificarToken(token);
+
+            if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.Sucesso))
+            {
+                return Ok(retorno.Mensagem);
             }
 
             return NotFound(retorno.Mensagem);

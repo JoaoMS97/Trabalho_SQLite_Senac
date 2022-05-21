@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
-builder.Services.AddDbContext<CadastroUsuarioContext>(options =>
+builder.Services.AddDbContext<UsuarioContext>(options =>
 {
     options.UseSqlite("Data Source=C:\\Users\\Predator\\CadastroUsuarioProjeto.db");
 });

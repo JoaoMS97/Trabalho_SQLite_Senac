@@ -6,7 +6,7 @@ namespace CadastroUsuario.Infraestructure.RepositoryBase
 {
     public class UsuarioRepository : RepositoryBase<UsuarioEntity>, IUsuarioRepository
     {
-        public UsuarioRepository(CadastroUsuarioContext context) : base(context)
+        public UsuarioRepository(UsuarioContext context) : base(context)
         {
         }
     }

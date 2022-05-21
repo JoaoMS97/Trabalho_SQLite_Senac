@@ -3,7 +3,6 @@ using CadastroUsuario.Application.Interfaces;
 using CadastroUsuario.Application.Utils;
 using CadastroUsuario.Domain.Entities;
 using CadastroUsuario.Infraestructure.Interfaces;
-using System.Security.Cryptography;
 
 namespace CadastroUsuario.Application.Services
 {
@@ -16,14 +15,61 @@ namespace CadastroUsuario.Application.Services
             _usuarioRepository = repository;
         }
 
-        public RetornoDto Inserir(string login, string senha)
+        public async Task<RetornoDto> RealizarLogin(string login, string senha)
         {
-            if(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(senha))
+            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(senha))
+            {
+                return new RetornoDto("Informe o login e a senha para logar no site", (int)StatusCodeEnum.Retorno.BadRequest);
+            }
+
+            var result = await _usuarioRepository.GetByLogin(login);
+
+            if (result == null)
+            {
+                return new RetornoDto("Login ou senha inválidos!", (int)StatusCodeEnum.Retorno.NotFound);
+            }
+
+            if (Utilitarios.RetornarHash(senha) != result.Password)
+            {
+                return new RetornoDto("Login ou senha inválidos!", (int)StatusCodeEnum.Retorno.BadRequest);
+            }
+
+            return new RetornoDto("Logado com Sucesso!", (int)StatusCodeEnum.Retorno.Sucesso);
+        }
+
+        public async Task<RetornoDto> AlterarSenha(string login)
+        {
+            if (string.IsNullOrEmpty(login))
+            {
+                return new RetornoDto("Informe o login para logar no site", (int)StatusCodeEnum.Retorno.BadRequest);
+            }
+
+            var result = await _usuarioRepository.GetByLogin(login);
+
+            if (result == null)
+            {
+                return new RetornoDto("Login inválido!", (int)StatusCodeEnum.Retorno.NotFound);
+            }
+
+            Guid token = Guid.NewGuid();
+            await _usuarioRepository.Insert(new UsuarioEntity(token));
+
+            return new RetornoDto(EnviaEmail.EnviarEmail(result, token), (int)StatusCodeEnum.Retorno.Sucesso);
+        }
+
+        public RetornoDto Inserir(string login, string senha, string email)
+        {
+            if(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(senha) || string.IsNullOrEmpty(email))
             {
                 return new RetornoDto(String.Format("Os campos '{0}' e '{1}' não podem ser nulos.", "login", "senha"), (int)StatusCodeEnum.Retorno.NotFound);
             }
 
-            _usuarioRepository.Insert(new UsuarioEntity(login, RetornarHash(senha)));
+            if (!Utilitarios.VerificarEmail(email))
+            {
+                return new RetornoDto("O email informado é invalido! por favor, informe um email válido.", (int)StatusCodeEnum.Retorno.NotFound);
+            }
+
+            _usuarioRepository.Insert(new UsuarioEntity(login, Utilitarios.RetornarHash(senha), email));
 
             return new RetornoDto("Sucesso", (int)StatusCodeEnum.Retorno.Sucesso);
         }
@@ -35,7 +81,7 @@ namespace CadastroUsuario.Application.Services
                 return new RetornoDto(String.Format("O campo '{0}' não pode ser nulo.", "Id"), (int)StatusCodeEnum.Retorno.BadRequest);
             }
 
-            var result = await _usuarioRepository.GetByGuid(id);
+            var result = await _usuarioRepository.GetById(id);
 
             if (result == null)
             {
@@ -45,38 +91,21 @@ namespace CadastroUsuario.Application.Services
             return new RetornoDto("Sucesso", (int)StatusCodeEnum.Retorno.Sucesso, result);
         }
 
-        public async Task<RetornoDto> RealizarLogin(string login, string senha)
+        public async Task<RetornoDto> VerificarToken(Guid token)
         {
-            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(senha))
+            if (token == Guid.Parse("00000000-0000-0000-0000-000000000000"))
             {
-                return new RetornoDto("Informe o login e a senha para logar no site", (int)StatusCodeEnum.Retorno.BadRequest);
+                return new RetornoDto("o Campo 'Token' não pode ser nulo.", (int)StatusCodeEnum.Retorno.BadRequest);
             }
 
-            var result = await _usuarioRepository.GetByLogin(login);
+            var result = await _usuarioRepository.GetByToken(token);
 
-            if(result == null)
+            if (result == null)
             {
-                return new RetornoDto("Login ou senha inválidos!", (int)StatusCodeEnum.Retorno.NotFound);
-            }    
-
-            if(RetornarHash(senha) != result.Password)
-            {
-                return new RetornoDto("Login ou senha inválidos!", (int)StatusCodeEnum.Retorno.BadRequest);
+                return new RetornoDto("O token informado é inválido!", (int)StatusCodeEnum.Retorno.NotFound);
             }
 
-            return new RetornoDto("Logado com Sucesso!", (int)StatusCodeEnum.Retorno.Sucesso);
-        }
-
-        private string RetornarHash(string senha)
-        {
-            string hash;
-
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                hash = Hash.GerarSenhaComHash(sha256Hash, senha);
-            }
-
-            return hash;
+            return new RetornoDto("Sucesso", (int)StatusCodeEnum.Retorno.Sucesso, result);
         }
     }
 }

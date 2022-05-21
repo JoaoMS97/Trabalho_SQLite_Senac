@@ -4,8 +4,11 @@
     {
         Task Insert(T entity);
 
-        Task<T> GetByGuid(Guid id);
+        Task<T> GetById(Guid id);
 
         Task<T> GetByLogin(string login);
+
+        Task<T> GetByToken(Guid id);
+
     }
 }
