@@ -9,17 +9,17 @@ namespace CadastroUsuario.Controllers
     [Route("[controller]")]
     public class LoginController : ControllerBase
     {
-        private readonly IUsuarioService _LoginService;
+        private readonly IParametrosDeAcessoService _LoginService;
 
-        public LoginController(IUsuarioService loginService)
+        public LoginController(IParametrosDeAcessoService loginService)
         {
             _LoginService = loginService;
         }
 
         [HttpGet("Logar")]
-        public async Task <IActionResult> Logar(string? login, string? senha)
+        public async Task <IActionResult> Logar(string? email, string? senha)
         {
-            var retorno = await _LoginService.RealizarLogin(login, senha);
+            var retorno = await _LoginService.RealizarLogin(email, senha);
 
             if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.Sucesso))
             {
@@ -35,9 +35,9 @@ namespace CadastroUsuario.Controllers
         }
 
         [HttpGet("AlterarSenha")]
-        public async Task<IActionResult> AlterarSenha(string? login)
+        public async Task<IActionResult> AlterarSenha(string? email)
         {
-            var retorno = await _LoginService.AlterarSenha(login);
+            var retorno = await _LoginService.AlterarSenha(email);
 
             if (retorno.StatusCode.Equals((int)StatusCodeEnum.Retorno.Sucesso))
             {

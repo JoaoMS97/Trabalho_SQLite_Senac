@@ -3,16 +3,18 @@ using System;
 using CadastroUsuario.Infraestructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace CadastroUsuario.Infraestructure.Migrations
 {
-    [DbContext(typeof(UsuarioContext))]
-    partial class RegisterUsuarioContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ParametrosDeAcessoContext))]
+    [Migration("20220523213321_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.5");
@@ -24,9 +26,6 @@ namespace CadastroUsuario.Infraestructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Login")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")

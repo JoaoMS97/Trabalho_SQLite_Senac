@@ -6,7 +6,7 @@
 
         Task<T> GetById(Guid id);
 
-        Task<T> GetByLogin(string login);
+        Task<T> GetByEmail(string email);
 
         Task<T> GetByToken(Guid id);
 

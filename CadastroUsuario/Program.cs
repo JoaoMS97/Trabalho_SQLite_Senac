@@ -13,13 +13,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IUsuarioService, UsuarioService>();
-builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IParametrosDeAcessoService, ParametrosDeAcessoService>();
+builder.Services.AddScoped<IParametrosDeAcessoRepository, ParametrosDeAcessoRepository>();
 
-builder.Services.AddDbContext<UsuarioContext>(options =>
+builder.Services.AddDbContext<ParametrosDeAcessoContext>(options =>
 {
-    options.UseSqlite("Data Source=C:\\Users\\Predator\\CadastroUsuarioProjeto.db");
-});
+    options.UseSqlite("Data Source=C:\\Users\\joaob\\OneDrive\\Documentos\\BaseDeDados\\CadastroUsuarioProjeto.db");
+}); 
 
 var app = builder.Build();
 

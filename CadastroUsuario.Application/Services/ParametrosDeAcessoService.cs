@@ -6,23 +6,23 @@ using CadastroUsuario.Infraestructure.Interfaces;
 
 namespace CadastroUsuario.Application.Services
 {
-    public class UsuarioService : IUsuarioService
+    public class ParametrosDeAcessoService : IParametrosDeAcessoService
     {
-        private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IParametrosDeAcessoRepository _usuarioRepository;
 
-        public UsuarioService(IUsuarioRepository repository)
+        public ParametrosDeAcessoService(IParametrosDeAcessoRepository repository)
         {
             _usuarioRepository = repository;
         }
 
-        public async Task<RetornoDto> RealizarLogin(string login, string senha)
+        public async Task<RetornoDto> RealizarLogin(string email, string senha)
         {
-            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(senha))
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(senha))
             {
-                return new RetornoDto("Informe o login e a senha para logar no site", (int)StatusCodeEnum.Retorno.BadRequest);
+                return new RetornoDto("Informe o email e a senha para logar no site", (int)StatusCodeEnum.Retorno.BadRequest);
             }
 
-            var result = await _usuarioRepository.GetByLogin(login);
+            var result = await _usuarioRepository.GetByEmail(email);
 
             if (result == null)
             {
@@ -37,14 +37,14 @@ namespace CadastroUsuario.Application.Services
             return new RetornoDto("Logado com Sucesso!", (int)StatusCodeEnum.Retorno.Sucesso);
         }
 
-        public async Task<RetornoDto> AlterarSenha(string login)
+        public async Task<RetornoDto> AlterarSenha(string email)
         {
-            if (string.IsNullOrEmpty(login))
+            if (string.IsNullOrEmpty(email))
             {
                 return new RetornoDto("Informe o login para logar no site", (int)StatusCodeEnum.Retorno.BadRequest);
             }
 
-            var result = await _usuarioRepository.GetByLogin(login);
+            var result = await _usuarioRepository.GetByEmail(email);
 
             if (result == null)
             {
@@ -52,14 +52,14 @@ namespace CadastroUsuario.Application.Services
             }
 
             Guid token = Guid.NewGuid();
-            await _usuarioRepository.Insert(new UsuarioEntity(token));
+            SQliteDirect.Update("UsuarioEntity", result, ".Token");
 
             return new RetornoDto(EnviaEmail.EnviarEmail(result, token), (int)StatusCodeEnum.Retorno.Sucesso);
         }
 
-        public RetornoDto Inserir(string login, string senha, string email)
+        public RetornoDto Inserir(string email, string senha)
         {
-            if(string.IsNullOrEmpty(login) || string.IsNullOrEmpty(senha) || string.IsNullOrEmpty(email))
+            if(string.IsNullOrEmpty(email) || string.IsNullOrEmpty(senha))
             {
                 return new RetornoDto(String.Format("Os campos '{0}' e '{1}' não podem ser nulos.", "login", "senha"), (int)StatusCodeEnum.Retorno.NotFound);
             }
@@ -69,7 +69,7 @@ namespace CadastroUsuario.Application.Services
                 return new RetornoDto("O email informado é invalido! por favor, informe um email válido.", (int)StatusCodeEnum.Retorno.NotFound);
             }
 
-            _usuarioRepository.Insert(new UsuarioEntity(login, Utilitarios.RetornarHash(senha), email));
+            _usuarioRepository.Insert(new ParametrosDeAcessoEntity(email, Utilitarios.RetornarHash(senha)));
 
             return new RetornoDto("Sucesso", (int)StatusCodeEnum.Retorno.Sucesso);
         }

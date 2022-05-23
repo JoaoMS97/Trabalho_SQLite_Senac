@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj": {}
+    "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj": {
+    "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
         "projectName": "CadastroUsuario.Domain",
-        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
-        "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\obj\\",
+        "projectPath": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj",
+        "packagesPath": "C:\\Users\\joaob\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Predator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joaob\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,21 +66,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj": {
+    "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj",
         "projectName": "CadastroUsuario.Infraestructure",
-        "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj",
-        "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\obj\\",
+        "projectPath": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\CadastroUsuario.Infraestructure.csproj",
+        "packagesPath": "C:\\Users\\joaob\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Predator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joaob\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,8 +94,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj": {
-                "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj"
+              "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj": {
+                "projectPath": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Domain\\CadastroUsuario.Domain.csproj"
               }
             }
           }
@@ -146,7 +146,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

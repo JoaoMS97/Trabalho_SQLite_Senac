@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CadastroUsuario.Infraestructure.Context
 {
-    public class UsuarioContext : DbContext
+    public class ParametrosDeAcessoContext : DbContext
     {
-        public UsuarioContext(DbContextOptions options) : base(options) { }
+        public ParametrosDeAcessoContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<UsuarioEntity> UsuarioEntity { get; set; }
+        public DbSet<ParametrosDeAcessoEntity> UsuarioEntity { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

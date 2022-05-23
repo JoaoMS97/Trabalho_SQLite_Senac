@@ -2,7 +2,7 @@
 
 namespace CadastroUsuario.Infraestructure.Interfaces
 {
-    public interface IUsuarioRepository : IRepositoryAsync<UsuarioEntity>
+    public interface IParametrosDeAcessoRepository : IRepositoryAsync<ParametrosDeAcessoEntity>
     {
     }
 }

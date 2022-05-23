@@ -1433,19 +1433,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Predator\\.nuget\\packages\\": {}
+    "C:\\Users\\joaob\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario\\CadastroUsuario.csproj",
+      "projectUniqueName": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario\\CadastroUsuario.csproj",
       "projectName": "CadastroUsuario",
-      "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario\\CadastroUsuario.csproj",
-      "packagesPath": "C:\\Users\\Predator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario\\obj\\",
+      "projectPath": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario\\CadastroUsuario.csproj",
+      "packagesPath": "C:\\Users\\joaob\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Predator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joaob\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1459,8 +1459,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj": {
-              "projectPath": "C:\\Users\\Predator\\source\\.Net6\\CadastroUsuario\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj"
+            "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj": {
+              "projectPath": "C:\\Users\\joaob\\OneDrive\\Documentos\\GitHub\\Trabalho_SQLite_Senac\\CadastroUsuario.Application\\CadastroUsuario.Application.csproj"
             }
           }
         }
@@ -1512,7 +1512,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   },

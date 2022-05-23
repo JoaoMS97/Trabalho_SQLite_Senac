@@ -4,9 +4,9 @@ using CadastroUsuario.Infraestructure.Interfaces;
 
 namespace CadastroUsuario.Infraestructure.RepositoryBase
 {
-    public class UsuarioRepository : RepositoryBase<UsuarioEntity>, IUsuarioRepository
+    public class ParametrosDeAcessoRepository : RepositoryBase<ParametrosDeAcessoEntity>, IParametrosDeAcessoRepository
     {
-        public UsuarioRepository(UsuarioContext context) : base(context)
+        public ParametrosDeAcessoRepository(ParametrosDeAcessoContext context) : base(context)
         {
         }
     }
